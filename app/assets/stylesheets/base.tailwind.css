@@ -38,53 +38,10 @@
   }
 
   :root {
-    --color-text-based: 0, 0, 0;       /* black */
-    --color-text-primary: 147, 51, 234;              /* purple-600 */
-    --color-text-muted: 75, 85, 99;         /* gray-600 */
-    --color-text-based-hover: 150, 150, 150;
-    --color-text-inverted: 225, 225, 225;
-    --color-bg: 245, 245, 245;                 /* off-white */
     --color-primary: 168, 85, 247;              /* purple-500 */
-    --color-primary-hover: 192, 132, 252;       /* purple-400 */
-    --color-primary-press: 147, 51, 234;        /* purple-600 */
-    --color-secondary: 21, 21, 21;
-    --color-secondary-hover: 33, 33, 33;
-    --color-secondary-press: 10, 10, 10;
-    --color-bg-surface: 235, 235, 235;
-    --color-bg-surface-accent: 200, 200, 200;
-    --color-page-transition: 200, 200, 200;
-    /* End theme vars */
-    --page-transition-duration: 500ms;
-    --nav-load-delay: var(--page-transition-duration);
-    --nav-load-time: 500ms;
-    --nav-link-load-time: 400ms;
-    --nav-total-load-time: calc(var(--nav-link-load-time) + var(--nav-load-delay));
-    --delay-between-content: 250ms;
-    --content-load-delay: calc(var(--nav-total-load-time) + 200ms);
-    --content-long-load-delay: calc(var(--content-load-delay) + var(--delay-between-content));
-    --content-secondary-load-delay: calc(var(--content-long-load-delay) + var(--delay-between-content));
-    --content-secondary-long-load-delay: calc(var(--content-secondary-load-delay) + var(--delay-between-content));
-    --content-tertiary-load-delay: calc(var(--content-secondary-long-load-delay) + var(--delay-between-content));
-    /* height screen minus footer */
-    --screen-minus-footer: calc(100vh - 160px);
-    --screen-minus-footer-large: calc(100vh - 212px);
   }
 
   .theme-dark {
-    --color-text-based: 247, 257, 255; /* off-white */
-    --color-text-primary: 192, 132, 252; /* purple-400 */
-    --color-text-muted: 170, 170, 180;
-    --color-text-based-hover: 255, 255, 255;
-    --color-text-inverted: 18, 18, 18;
-    --color-bg: 17, 24, 39; /* dark color */
-    --color-primary: 168, 85, 247; /* purple-500 */
-    --color-primary-hover: 192, 132, 252; /* purple-400 */
-    --color-primary-press: 147, 51, 234; /* purple-600 */
-    --color-secondary: 21, 21, 21;
-    --color-secondary-hover: 33, 33, 33;
-    --color-secondary-press: 10, 10, 10;
-    --color-bg-surface: 31, 41, 55; /* dark color */
-    --color-bg-surface-accent: 55, 65, 81;
-    --color-page-transition: 31, 41, 55;
+    --color-primary: 168, 85, 247;              /* purple-500 */
   }
 }

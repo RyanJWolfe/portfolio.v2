@@ -32,3 +32,9 @@
 
 /app/assets/builds/*
 !/app/assets/builds/.keep
+
+.env
+.idea
+.DS_STORE
+.vs_code
+

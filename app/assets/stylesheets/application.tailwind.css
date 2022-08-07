@@ -28,7 +28,7 @@
     @apply text-based underline underline-offset-2 decoration-2
   }
   .link-primary {
-    @apply decoration-primary hover:text-primary active:text-primary-press active:decoration-primary-press
+    @apply decoration-primary hover:text-primary transition active:text-primary-press active:decoration-primary-press
   }
 }
 

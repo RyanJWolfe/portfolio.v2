@@ -1,0 +1,12 @@
+<div data-mobile-menu-target="shopDropdown" class="w-full h-full shop-link">
+  <div data-action="click->mobile-menu#toggleShopDropdown"
+       class="py-2 sm:py-3 px-5 flex items-center justify-between hover:cursor-pointer">
+    <p class="w-full font-bold font-display text-xl text-left <%= 'text-primary' if inside_shop %>">
+      Shop
+    </p>
+    <div class="chevron-down">
+      <%= render 'shared/svgs/chevron_down', size: 24 %>
+    </div>
+  </div>
+  <%= render 'layouts/nav/mobile_menu/shop_dropdown' %>
+</div>

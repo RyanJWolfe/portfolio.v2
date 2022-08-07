@@ -1,0 +1,33 @@
+<div data-mobile-menu-target="dropdown"
+     id="mobile-menu"
+     class="max-h-0 transition-[all] duration-300 ease-in-out border-surface lg:hidden overflow-hidden">
+  <div class="w-full h-full">
+    <%= render 'layouts/nav/mobile_menu/mobile_menu_link',
+               route: root_path,
+               content: 'Home',
+               border: 'border-b',
+               condition: current_page?(root_path),
+               delay: '0ms' %>
+    <% if current_user&.admin? %>
+      <%= render 'layouts/nav/mobile_menu/mobile_menu_link',
+                 route: admin_path,
+                 content: 'Admin',
+                 border: 'border-b',
+                 condition: current_page?(admin_path),
+                 delay: '0ms' %>
+    <% end %>
+    <%= render 'layouts/nav/mobile_menu/shop_link' %>
+    <%= render 'layouts/nav/mobile_menu/mobile_menu_link',
+               route: root_path,
+               content: 'About',
+               border: 'border-y',
+               condition: false,
+               delay: '0ms' %>
+    <%= render 'layouts/nav/mobile_menu/mobile_menu_link',
+               route: root_path,
+               border: '',
+               content: 'Contact',
+               condition: false,
+               delay: '0ms' %>
+  </div>
+</div>

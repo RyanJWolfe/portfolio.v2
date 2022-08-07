@@ -1,0 +1,16 @@
+<div class="shop-dropdown">
+  <div class="p-5 space-y-8 font-display font-semibold">
+    <h3>Products</h3>
+    <div class="text-primary px-5 flex flex-col space-y-8">
+      <%= link_to 'All', items_path %>
+      <%= link_to 'Featured', items_featured_path %>
+      <%= link_to 'New Arrivals', items_recent_path %>
+    </div>
+
+    <h3>Categories</h3>
+    <div class="text-primary px-5 flex flex-col space-y-8">
+      <%= link_to 'All', categories_path %>
+      <%= render partial: 'categories/category_link', collection: Category.all, as: :category %>
+    </div>
+  </div>
+</div>

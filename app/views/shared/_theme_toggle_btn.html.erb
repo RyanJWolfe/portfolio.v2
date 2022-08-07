@@ -1,0 +1,12 @@
+<button title="Toggle color scheme"
+        data-controller="theme"
+        data-action="click->theme#toggleTheme"
+        type=button
+        class="nav-icon lg:order-last lg:pr-0">
+  <div class="hidden dark:block">
+    <%= render 'shared/svgs/sun', size: 24 %>
+  </div>
+  <div class="dark:hidden block">
+    <%= render 'shared/svgs/moon', size: 24 %>
+  </div>
+</button>

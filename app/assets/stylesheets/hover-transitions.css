@@ -1,0 +1,50 @@
+@tailwind utilities;
+
+@layer utilities {
+    .hover-underline {
+        display: inline-block;
+        position: relative;
+    }
+
+    .hover-underline:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transform-origin: bottom right;
+        transition: transform 150ms ease-in-out;
+        background-color: rgb(var(--color-primary));
+    }
+
+    .hover-underline:hover {
+        cursor: pointer;
+    }
+
+    .hover-underline:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .hover-underline.focused:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .no-transition {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+    }
+
+    /*hover:scale-105 transition-all duration-200*/
+    .hover-scale {
+        transition: all 0.2s ease-in-out;
+    }
+    .hover-scale:hover {
+        transform: scale(1.15);
+    }
+}

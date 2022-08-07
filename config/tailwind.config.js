@@ -16,6 +16,12 @@ module.exports = {
       },
       colors: {
         primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        muted: 'rgb(var(--color-text-muted) / <alpha-value>)',
+        'primary-hover': 'rgb(var(--color-primary-hover) / <alpha-value>)',
+        'primary-press': 'rgb(var(--color-primary-press) / <alpha-value>)',
+      },
+      textColor: {
+        based: 'rgb(var(--color-text-based) / <alpha-value>)',
       },
       backgroundColor: {
         base: 'rgb(var(--color-bg) / <alpha-value>)',

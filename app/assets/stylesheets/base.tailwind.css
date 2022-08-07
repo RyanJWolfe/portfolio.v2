@@ -38,10 +38,16 @@
   }
 
   :root {
-    --color-primary: 168, 85, 247;              /* purple-500 */
+    --color-primary: 168 85 247;              /* purple-500 */
+
+    --color-bg: 219 221 224;                  /* #dbdde0 */
+    --color-bg-nav: 255 255 255;                 /* #ffffff */
   }
 
   .theme-dark {
-    --color-primary: 168, 85, 247;              /* purple-500 */
+    --color-primary: 168 85 247;              /* purple-500 */
+
+    --color-bg: 18 18 18;                     /* #121212 */
+    --color-bg-nav: 24 24 24;                    /* #181818 */
   }
 }

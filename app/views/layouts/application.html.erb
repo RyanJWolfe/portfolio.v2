@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html class="dark theme-dark", lang="en">
   <head>
     <title>PortfolioV2</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= javascript_tag type: 'application/javascript' do %>
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      localStorage.theme = 'dark'
-      } else {
-      document.documentElement.classList.remove('theme-dark')
-      document.documentElement.classList.remove('dark')
-      localStorage.theme = 'light'
-      }
+      // if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      // localStorage.theme = 'dark'
+      // } else {
+      // document.documentElement.classList.remove('theme-dark')
+      // document.documentElement.classList.remove('dark')
+      // localStorage.theme = 'light'
+      // }
     <% end %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
@@ -21,7 +21,8 @@
     <%= favicon_link_tag 'icons/wolf.ico' %>
   </head>
 
-  <body>
+  <body class="bg-base dark:text-white">
+    <%= render 'layouts/header/header' %>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>

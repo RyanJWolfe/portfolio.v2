@@ -16,6 +16,10 @@ module.exports = {
       },
       colors: {
         primary: 'rgb(var(--color-primary) / <alpha-value>)',
+      },
+      backgroundColor: {
+        base: 'rgb(var(--color-bg) / <alpha-value>)',
+        nav: 'rgb(var(--color-bg-nav) / <alpha-value>)',
       }
     },
   },

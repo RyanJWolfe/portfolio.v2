@@ -1,3 +1,16 @@
-<nav class="bg-nav h-20">
-  Nav Bar
+<nav class="bg-base/90 backdrop-blur h-20 container mx-auto px-5">
+  <div class="flex items-center justify-around h-full w-full">
+    <%= link_to root_path do %>
+      <div class="flex space-x-1 items-center tracking-widest uppercase">
+        <h2 class="font-display font-bold text-lg md:text-2xl">Ryan</h2>
+        <h2 class="font-display font-bold text-lg md:text-2xl text-bg-base bg-primary/90 py-0.5 px-1.5">Wolfe</h2>
+      </div>
+    <% end %>
+    <div id="navbar-links" class="flex items-center space-x-4">
+      <%= render 'layouts/header/link', title: 'Home', route: root_path, condition: current_page?(root_path) %>
+      <%= render 'layouts/header/link', title: 'About', route: root_path, condition: false %>
+      <%= render 'layouts/header/link', title: 'Projects', route: root_path, condition: false %>
+      <%= render 'layouts/header/link', title: 'Contact', route: root_path, condition: false %>
+    </div>
+  </div>
 </nav>

@@ -10,8 +10,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Raleway', ...defaultTheme.fontFamily.sans],
+        display: 'Poppins',
       },
+      colors: {
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+      }
     },
   },
   plugins: [

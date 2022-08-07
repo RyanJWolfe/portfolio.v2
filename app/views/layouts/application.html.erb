@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= javascript_tag type: 'application/javascript' do %>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      localStorage.theme = 'dark'
+      } else {
+      document.documentElement.classList.remove('theme-dark')
+      document.documentElement.classList.remove('dark')
+      localStorage.theme = 'light'
+      }
+    <% end %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= favicon_link_tag 'icons/wolf.ico' %>
   </head>
 
   <body>

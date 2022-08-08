@@ -47,6 +47,7 @@
   .header::before, .header::after {
     content: '';
     flex: 1 1 auto; /* the first digit is 'flex-grow: 1', helps element to occupy all free space */
-    border-bottom: solid 1px #fff;
+    border-bottom: solid 3px;
+    border-color: rgb(var(--color-bg-surface));
   }
 }

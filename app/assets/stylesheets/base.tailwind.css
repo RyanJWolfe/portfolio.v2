@@ -46,6 +46,8 @@
 
     --color-bg: 219 221 224;                  /* #dbdde0 */
     --color-bg-nav: 255 255 255;              /* #ffffff */
+    --color-bg-surface: 255 255 255;          /* #ffffff */
+    --color-bg-surface-alt: 225 225 225;      /* #e1e1e1 */
   }
 
   .theme-dark {
@@ -57,5 +59,7 @@
 
     --color-bg: 12 12 12;
     --color-bg-nav: 18 18 18;
+    --color-bg-surface: 24 24 24;
+    --color-bg-surface-alt: 28 28 28;
   }
 }

@@ -26,6 +26,8 @@ module.exports = {
       backgroundColor: {
         base: 'rgb(var(--color-bg) / <alpha-value>)',
         nav: 'rgb(var(--color-bg-nav) / <alpha-value>)',
+        surface: 'rgb(var(--color-bg-surface) / <alpha-value>)',
+        'surface-alt': 'rgb(var(--color-bg-surface-alt) / <alpha-value>)',
       }
     },
   },

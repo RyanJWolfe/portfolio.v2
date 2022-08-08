@@ -8,8 +8,8 @@
     <% end %>
     <div class="flex space-x-4">
       <div id="navbar-links" class="hidden lg:flex items-center space-x-4">
-        <%= render 'layouts/header/navbar/link', title: 'Home', route: root_path, condition: current_page?(root_path) %>
-        <%= render 'layouts/header/navbar/link', title: 'About', route: root_path, condition: false %>
+        <%= render 'layouts/header/navbar/link', title: 'Home', route: root_path(anchor: 'home'), condition: current_page?(root_path) %>
+        <%= render 'layouts/header/navbar/link', title: 'About', route: root_path(anchor: 'about'), condition: false %>
         <%= render 'layouts/header/navbar/link', title: 'Projects', route: root_path, condition: false %>
         <%= render 'layouts/header/navbar/link', title: 'Contact', route: root_path, condition: false %>
       </div>

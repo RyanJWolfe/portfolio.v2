@@ -1,3 +1,20 @@
-<div>
-  <%= render 'pages/about/text' %>
+<div class="container mx-auto">
+  <div class="space-y-6 max-w-2xl mx-auto">
+    <div class="header">
+      <h1 class="relative flex font-display font-bold text-4xl z-10 px-8">About Me</h1>
+    </div>
+    <%= render 'pages/about/text' %><div class="text-muted grid gap-y-8 grid-cols-1 sm:grid-cols-2 lg:flex">
+    <%= render 'pages/about/skills' %>
+    <div class="flex justify-center items-center lg:hidden">
+      <%= image_tag 'pic-with-wiley.jpg',
+                    class: "rounded-lg h-60 lg:h-80 object-cover object-center shadow-xl align-center",
+                    style: "box-shadow: 30px 30px 0 rgb(var(--color-primary), .3);"%>
+    </div>
+  </div>
+    <div class="hidden lg:flex justify-center lg:col-span-6 xl:col-span-5 items-center">
+      <%= image_tag 'pic-with-wiley.jpg',
+                    class: "rounded-lg h-60 lg:h-80 object-cover object-center shadow-xl align-center",
+                    style: "box-shadow: 30px 30px 0 rgb(var(--color-primary), .3);"%>
+    </div>
+  </div>
 </div>

@@ -3,34 +3,35 @@
     position: relative;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     z-index: 50;
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     transform: scaleX(-1)
 }
 .burger {
     position: relative;
     width: 28px;
-    height: 4px;
+    height: 3px;
     background: rgb(var(--color-text-based));
-    transition: transform .275s, background-color .275s
+    transition: transform .275s, background-color .275s, width .275s;
 }
 .burger::before,
 .burger::after {
     content: '';
     position: absolute;
-    width: 28px;
     height: 100%;
     background: rgb(var(--color-text-based));
     transition: transform .275s;
 }
 .burger::before {
+    width: 35px;
     transform: translateY(-9px);
 }
 .burger::after {
+    width: 21px;
     transform: translateY(9px);
 }
 /* ANIMATION */
@@ -39,15 +40,19 @@
     background: transparent;
 }
 
-.menu-btn.open .burger::before {
+.menu-btn.open .burger::before,
+.menu-btn.open .burger::after {
+    width: 28px;
     transition: transform .275s, background-color .275s;
-    transform: translate(-10px) rotate(-45deg);
     background: white;
+
+}
+
+.menu-btn.open .burger::before {
+    transform: translate(-10px) rotate(-45deg);
 }
 .menu-btn.open .burger::after {
-    transition: transform .275s, background-color .275s;
     transform: translate(-10px) rotate(45deg);
-    background: white;
 }
 
 /* Mobile menu derived from https://codepen.io/GeoffreyCrofte/pen/ajKVRq */
@@ -58,7 +63,7 @@
     left: 0;
     bottom: 0;
     text-align: center;
-    background: rgb(var(--color-bg) / .75);
+    background: rgb(var(--color-bg) / .80);
     opacity: 0;
     z-index: -1;
     visibility: hidden;
@@ -78,7 +83,7 @@
     bottom: 0;
     left: 0;
     right: -15px;
-    background: #7c3be0;
+    background-image: linear-gradient(to bottom right, rebeccapurple, darkslateblue);
     transform-origin: 0 0;
     opacity: 0;
     transform: skew(-14deg) translateX(-120%);

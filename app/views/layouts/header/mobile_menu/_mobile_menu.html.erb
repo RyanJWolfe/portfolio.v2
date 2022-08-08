@@ -2,29 +2,8 @@
      id="mobile-menu"
      class="mobile-menu lg:hidden">
   <ul class="mobile-menu-list">
-    <%= render 'layouts/header/mobile_menu/link',
-               route: root_path,
-               content: 'Home',
-               border: 'border-b',
-               condition: current_page?(root_path),
-               delay: '0ms' %>
-    <%= render 'layouts/header/mobile_menu/link',
-               route: root_path,
-               content: 'About',
-               border: 'border-b',
-               condition: false,
-               delay: '0ms' %>
-    <%= render 'layouts/header/mobile_menu/link',
-               route: root_path,
-               content: 'Projects',
-               border: 'border-b',
-               condition: false,
-               delay: '0ms' %>
-    <%= render 'layouts/header/mobile_menu/link',
-               route: root_path,
-               border: '',
-               content: 'Contact',
-               condition: false,
-               delay: '0ms' %>
+    <% navigation_links.each do |locals| %>
+      <%= render 'layouts/header/mobile_menu/link', locals %>
+    <% end %>
   </ul>
 </div>

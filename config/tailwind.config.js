@@ -1,6 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  darkMode: 'class',
   content: [
     './public/*.html',
     './app/helpers/**/*.rb',
@@ -8,7 +9,6 @@ module.exports = {
     './app/views/**/*.{erb,haml,html,slim}'
   ],
   theme: {
-    darkMode: 'class',
     extend: {
       fontFamily: {
         sans: ['Raleway', ...defaultTheme.fontFamily.sans],

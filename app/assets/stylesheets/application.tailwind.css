@@ -30,6 +30,10 @@
   .link-primary {
     @apply decoration-primary hover:text-primary transition active:text-primary-press active:decoration-primary-press
   }
+
+  .icon {
+    @apply inline-block hover-scale hover:text-primary active:text-primary-press
+  }
 }
 
 

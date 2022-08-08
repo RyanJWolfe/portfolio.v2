@@ -42,7 +42,7 @@
 
     /*hover:scale-105 transition-all duration-200*/
     .hover-scale {
-        transition: all 0.2s ease-in-out;
+        transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
     }
     .hover-scale:hover {
         transform: scale(1.15);

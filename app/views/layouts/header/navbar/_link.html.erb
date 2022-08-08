@@ -1,4 +1,4 @@
 <%= link_to title,
             route,
-            class: "hover-underline px-1 text-lg font-semibold
-                    #{'font-bold text-primary' if condition }" %>
+            class: "hover-underline px-1 text-lg font-display
+                    #{ condition ? 'font-bold text-primary' : 'font-light' }" %>

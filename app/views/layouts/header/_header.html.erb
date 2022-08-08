@@ -1,4 +1,7 @@
-<header class="top-0 fixed w-full bg-base/90 backdrop-blur z-50" data-controller="mobile-menu">
+<header class="top-0 fixed w-full bg-base/90 backdrop-blur z-50
+               transition-[top] duration-300 ease-in-out"
+        data-controller="mobile-menu"
+        data-header-target="navbar">
   <%= render 'layouts/header/navbar/navbar' %>
   <%= render 'layouts/header/mobile_menu/mobile_menu' %>
 </header>

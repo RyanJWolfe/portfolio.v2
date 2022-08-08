@@ -1,7 +1,7 @@
 <div data-mobile-menu-target="dropdown"
      id="mobile-menu"
-     class="max-h-0 transition-[all] duration-300 ease-in-out border-surface lg:hidden overflow-hidden">
-  <div class="w-full h-full">
+     class="mobile-menu text-based">
+  <div class="options">
     <%= render 'layouts/header/mobile_menu/link',
                route: root_path,
                content: 'Home',
@@ -28,3 +28,4 @@
                delay: '0ms' %>
   </div>
 </div>
+<%= render 'layouts/header/mobile_menu/mobile_menu_btn' %>

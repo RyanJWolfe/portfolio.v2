@@ -21,8 +21,9 @@
     <%= favicon_link_tag 'icons/wolf.ico' %>
   </head>
 
-  <body class="bg-base text-based">
-    <%= render 'layouts/header/header' %>
+  <body class="bg-base text-based relative" data-controller="mobile-menu">
+  <%#= render 'layouts/header/header' %>
+  <%= render 'layouts/header/mobile_menu/mobile_menu' %>
     <main class="container mx-auto mt-28 px-5">
       <%= yield %>
     </main>

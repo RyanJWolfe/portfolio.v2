@@ -21,29 +21,12 @@ export default class extends Controller {
     if (this.hasDropdownTarget)
       this.menuBtnTarget.classList.remove('open')
       this.dropdownTarget.classList.remove('open')
-    // this.dropdownTarget.classList.add('hidden')
     this.sideMenuOpen = false
-    let fadeInElements = document.getElementsByClassName('side-menu-fade-in')
-    for (let i = 0; i < fadeInElements.length; i++) {
-      let el = fadeInElements[i]
-      el.classList.remove('appear')
-    }
-    this.dropdownTarget.classList.remove('border-t', 'max-h-[3000px]')
-    this.dropdownTarget.classList.add('max-h-0')
   }
 
   open() {
-    let fadeInElements = document.getElementsByClassName('side-menu-fade-in')
-    for (let i = 0; i < fadeInElements.length; i++) {
-      let el = fadeInElements[i]
-      el.classList.add('appear')
-    }
     this.menuBtnTarget.classList.add('open')
     this.dropdownTarget.classList.add('open')
-    // this.dropdownTarget.classList.remove('hidden')
-    this.dropdownTarget.classList.remove('max-h-0')
-    this.dropdownTarget.classList.add('border-t', 'max-h-[3000px]')
-
     this.sideMenuOpen = true
   }
 

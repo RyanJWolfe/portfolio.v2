@@ -107,21 +107,23 @@
 
 .mobile-menu-item {
     display: block;
-    margin: 20px 0;
+    /*margin: 20px auto;*/
     text-align: right;
     transform: skew(16deg);
 }
 
 /* Apparition effect on links */
-.mobile-menu-link {
+.mobile-menu .mobile-menu-link {
+    display: block;
     opacity: 0;
     transform: translateY(-10px);
 }
 
-.open .mobile-menu-link {
+.mobile-menu.open .mobile-menu-link {
     opacity: 1;
     transform: translateY(0);
 }
+
 .mobile-menu .mobile-menu-item:nth-child(1) .mobile-menu-link {
     transition: all 275ms 175ms
 }

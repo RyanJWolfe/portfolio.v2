@@ -42,7 +42,7 @@
     @apply text-red-500 text-sm
   }
   .contact-form-text-area {
-    @apply px-1 py-2 bg-base w-full border-b-2 focus:outline-none focus:border-primary text-area-transition
+    @apply px-1 py-2 bg-base w-full border-b-2 border-b-gray-500 focus:outline-none focus:border-primary text-area-transition
   }
 }
 

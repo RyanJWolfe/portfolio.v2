@@ -1,0 +1,43 @@
+<%= form_for @contact, url: contact_path, method: :post do |f| %>
+  <% invalid = @contact.errors.include?(:name) %>
+  <div class="py-3 space-y-2">
+    <%= f.text_field :name, required: true, class: "contact-form-text-area #{invalid ? 'is-invalid' : 'border-surface-accent'}" , placeholder: "Name" %>
+    <% if invalid %>
+      <div class="invalid-feedback">
+        <%= @contact.errors.full_messages_for(:name).each do |error_message| %>
+          <%= error_message %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <% invalid = @contact.errors.include?(:email) %>
+  <div class="py-3 space-y-2">
+    <%= f.text_field :email, required: true, class: "contact-form-text-area #{invalid ? 'is-invalid' : 'border-surface-accent'}", placeholder: "Email" %>
+    <% if invalid %>
+      <div class="invalid-feedback">
+        <%= @contact.errors.full_messages_for(:email).join(', ') %>
+      </div>
+    <% end %>
+  </div>
+
+  <% invalid = @contact.errors.include?(:message) %>
+  <div class="py-3 space-y-2">
+    <%= f.text_area :message, rows: 8, required: true, class: "contact-form-text-area #{invalid ? 'is-invalid' : 'border-surface-accent'}",
+                    placeholder: "Message"%>
+    <% if invalid %>
+      <div class="invalid-feedback">
+        <%= @contact.errors.full_messages.join(', ') %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class= "hidden">
+    <%= f.label :nickname %>
+    <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+  </div>
+
+  <div class="py-3">
+    <%= f.submit 'Send', class: 'btn btn-primary w-full cursor-pointer' %>
+  </div>
+<% end %>

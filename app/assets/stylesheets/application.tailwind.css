@@ -34,6 +34,16 @@
   .icon {
     @apply inline-block hover-scale hover:text-primary active:text-primary-press
   }
+
+  .is-invalid {
+    @apply border-red-500
+  }
+  .invalid-feedback {
+    @apply text-red-500 text-sm
+  }
+  .contact-form-text-area {
+    @apply px-1 py-2 bg-base w-full border-b-2 focus:outline-none focus:border-primary text-area-transition
+  }
 }
 
 @layer utilities {
@@ -49,5 +59,16 @@
     flex: 1 1 auto; /* the first digit is 'flex-grow: 1', helps element to occupy all free space */
     border-bottom: solid 3px;
     border-color: rgb(var(--color-text-muted));
+  }
+
+  .text-area-transition {
+    transition: border-bottom 250ms ease-in-out, padding 250ms ease-out;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: all 10000s ease-in-out 0s;
   }
 }

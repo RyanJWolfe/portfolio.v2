@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   root 'pages#index'
   get '/contact', to: 'contacts#new'
   get '/contact/success', to: 'contacts#success'
-  post '/contact', to: 'contacts#new'
+  post '/contact', to: 'contacts#create'
 end

@@ -31,11 +31,11 @@ class ContactsController < ApplicationController
       redirect_to contact_success_path
     else
       flash.now[:error] = 'Could not send message'
-      render contact_path
+      render contact_path, status: :unprocessable_entity
     end
   end
 
   def contacts_params
-    params.require(:contact).permit(:name, :email, :message, :nickname)
+    params.require(:contact_form).permit(:name, :email, :message, :nickname)
   end
 end

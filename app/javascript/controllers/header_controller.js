@@ -4,7 +4,6 @@ export default class extends Controller {
   static targets = ["navbar", "mobileDropdown", "nav"]
 
   connect() {
-    console.log(this.hasNavbarTarget)
     window.addEventListener('scroll', (e) => this.handleScroll(e))
   }
 

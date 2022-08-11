@@ -5,6 +5,13 @@ export default class extends Controller {
 
   connect() {
     this.sideMenuOpen = false
+    window.addEventListener('click', (e) => this.handleClick(e))
+
+  }
+
+  handleClick(e) {
+    if (this.sideMenuOpen)
+      this.hide()
   }
 
   toggleMenuDropdown(e) {

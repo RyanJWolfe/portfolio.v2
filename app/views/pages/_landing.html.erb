@@ -1,16 +1,18 @@
-<div class="h-screen -mt-28 flex flex-col justify-center items-center">
-  <div class="space-y-2 my-5 text-center">
-    <h1 class="font-display font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl">Ryan Wolfe</h1>
-    <h2 class="font-display font-bold text-gray-300 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">Software Engineer</h2>
-  </div>
-  <p class="font-light text-muted text-center
-            max-w-xs sm:max-w-md lg:max-w-lg lg:text-lg">
-    Phoenix-based software engineer who enjoys solving problems as well as designing and building web applications.
-    I am currently focused on building digital learning solutions at
-    <%= link_to 'StrongMind', 'https://www.strongmind.com/', target: '_blank', class: "link link-primary" %>.
-  </p>
+<section id="home" class="h-screen w-screen -mx-5 -mt-28 bg-gradient-to-br from-primary/[.18] via-primary/[.10] to-bg-base">
+  <div class="flex flex-col justify-center items-center h-full">
+    <div class="space-y-2 my-5 text-center">
+      <h1 class="font-display font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl">Ryan Wolfe</h1>
+      <h2 class="font-display font-bold text-gray-300 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">Software Engineer</h2>
+    </div>
+    <p class="font-light text-muted text-center
+              max-w-xs sm:max-w-md lg:max-w-lg lg:text-lg">
+      Phoenix-based software engineer who enjoys solving problems as well as designing and building web applications.
+      I am currently focused on building digital learning solutions at
+      <%= link_to 'StrongMind', 'https://www.strongmind.com/', target: '_blank', class: "link link-primary" %>.
+    </p>
 
-  <div class="my-5">
-    <%= link_to 'Say Hello', contact_path, class: "btn btn-primary" %>
+    <div class="my-5">
+      <%= link_to 'Say Hello', contact_path, class: "btn btn-primary" %>
+    </div>
   </div>
-</div>
+</section>

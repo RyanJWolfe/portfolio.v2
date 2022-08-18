@@ -4,8 +4,16 @@ export default class extends Controller {
   static targets = ["navbar", "mobileDropdown", "nav", "background"]
 
   connect() {
-    this.handleScroll()
     window.addEventListener('scroll', (e) => this.handleScroll())
+  }
+
+  initialize() {
+    this.handleScroll()
+
+  }
+
+  disconnect() {
+    this.hide()
   }
 
   handleScroll() {
@@ -18,15 +26,26 @@ export default class extends Controller {
     //   this.navbarTarget.classList.add('top-0')
     // }
 
-    if (scrollTop > 50) {
-      this.navbarTarget.classList.remove('py-2', 'sm:py-4', 'bg-transparent')
-      this.backgroundTarget.classList.remove('top-[-100px]')
-      this.backgroundTarget.classList.add('top-0')
+    if (scrollTop > 150) {
+      this.show()
     } else {
-      this.navbarTarget.classList.add('py-2', 'sm:py-4', 'bg-transparent')
-      this.backgroundTarget.classList.remove('top-0')
-      this.backgroundTarget.classList.add('top-[-100px]')
+      this.hide()
     }
     this.lastScrollTop = scrollTop
+  }
+
+  show() {
+    this.navbarTarget.classList.remove('py-2', 'sm:py-4', 'bg-transparent')
+    this.navbarTarget.classList.add('bg-nav')
+
+    // this.backgroundTarget.classList.remove('top-[-70px]')
+    // this.backgroundTarget.classList.add('top-0')
+  }
+
+  hide() {
+    this.navbarTarget.classList.add('py-2', 'sm:py-4', 'bg-transparent')
+    this.navbarTarget.classList.remove('bg-nav')
+    // this.backgroundTarget.classList.remove('top-0')
+    // this.backgroundTarget.classList.add('top-[-70px]')
   }
 }

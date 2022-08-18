@@ -1,13 +1,12 @@
 <div id="nav-background"
      data-header-target="background"
-     class="w-screen h-16 sm:h-20 absolute left-2/4 -translate-x-2/4 pointer-events-none
-            transition-[top] duration-300 ease-in-out brightness-[.5]
-            bg-gradient-to-r from-primary/[.6] via-primary/[.5] to-bg-base">
+     class="w-screen h-14 sm:h-16 absolute left-2/4 -translate-x-2/4 pointer-events-none top-[-100px] z-0
+            transition-[top] duration-300 ease-in-out shadow-lg bg-gradient-to-br from-bg-nav dark:from-bg-nav dark:to-purple-900 to-purple-300">
 </div>
 
-<nav class="h-16 sm:h-20 container mx-auto px-5" data-header-target="nav">
+<nav class="h-14 sm:h-16 container mx-auto px-5" data-header-target="nav">
   <div class="flex items-center justify-between xl:justify-around h-full w-full">
-    <%= link_to root_path, class: "hover-underline pb-1" do %>
+    <%= link_to root_path, class: "hover-underline" do %>
       <div class="flex space-x-1 items-center tracking-widest uppercase">
         <h2 class="font-display font-bold text-lg md:text-2xl">Ryan</h2>
         <h2 class="font-display font-bold text-lg md:text-2xl text-bg-base bg-primary/90 py-0.5 px-1.5">Wolfe</h2>

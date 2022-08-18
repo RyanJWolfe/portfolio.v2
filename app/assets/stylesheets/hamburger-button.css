@@ -63,7 +63,7 @@
     left: 0;
     bottom: 0;
     text-align: center;
-    background: rgb(var(--color-bg) / .80);
+    background: rgb(28, 28, 28, .65);
     opacity: 0;
     visibility: hidden;
     transition: all .375s;

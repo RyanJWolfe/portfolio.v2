@@ -7,13 +7,15 @@
 
 @layer components {
   .btn {
-    @apply inline-block px-5 py-3 rounded outline-none tracking-wider font-semibold text-sm sm:text-base text-based font-mono
+    @apply inline-block px-5 py-3 outline-none tracking-wider text-sm sm:text-base text-based font-bold
   }
   .btn:focus {
     @apply outline-none ring ring-offset-2
   }
   .btn-primary {
-    @apply bg-base text-primary hover:bg-primary/25 hover:text-based active:bg-primary-press/25 border border-primary shadow shadow-primary
+    @apply bg-transparent text-based hover:bg-primary hover:text-based active:bg-primary-press
+    border border-black dark:border-white hover:border-primary hover:dark:border-primary shadow-lg
+    transition duration-300 ease-in-out
   }
   .btn-primary:focus {
     @apply outline-none ring-primary;

@@ -4,12 +4,8 @@ export default class extends Controller {
   static targets = ["navbar", "mobileDropdown", "nav", "background"]
 
   connect() {
-    window.addEventListener('scroll', (e) => this.handleScroll())
-  }
-
-  initialize() {
     this.handleScroll()
-
+    window.addEventListener('scroll', (e) => this.handleScroll())
   }
 
   disconnect() {
@@ -26,7 +22,7 @@ export default class extends Controller {
     //   this.navbarTarget.classList.add('top-0')
     // }
 
-    if (scrollTop > 150) {
+    if (scrollTop > 125) {
       this.show()
     } else {
       this.hide()

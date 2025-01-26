@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ContactForm < MailForm::Base
   attribute :name, validate: true
   attribute :email, validate: URI::MailTo::EMAIL_REGEXP

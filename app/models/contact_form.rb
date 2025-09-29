@@ -11,8 +11,8 @@ class ContactForm < MailForm::Base
   def headers
     {
       subject: "Message from #{%("#{name}" <#{email}>)}",
-      to: ENV['CONTACT_EMAIL_RECIPIENT'],
-      from: ENV['CONTACT_EMAIL_RECIPIENT']
+      to: ENV["CONTACT_EMAIL_RECIPIENT"],
+      from: ENV["CONTACT_EMAIL_RECIPIENT"]
     }
   end
 end

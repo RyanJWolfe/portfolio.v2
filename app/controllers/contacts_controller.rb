@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
     if @contact.valid?
       deliver_message
     else
-      flash[:error] = 'Unable to send message.'
+      flash[:error] = "Unable to send message."
       respond_to do |format|
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
@@ -27,10 +27,10 @@ class ContactsController < ApplicationController
   def deliver_message
     @contact.request = request
     if @contact.deliver
-      flash.now[:success] = 'Message sent!'
+      flash.now[:success] = "Message sent!"
       redirect_to contact_success_path
     else
-      flash.now[:error] = 'Could not send message'
+      flash.now[:error] = "Could not send message"
       render contact_path, status: :unprocessable_entity
     end
   end
